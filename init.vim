@@ -1,4 +1,4 @@
-call plug#begin()
+	call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'dracula/vim', {'name':'dracula'}
@@ -9,6 +9,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'vim-airline/vim-airline'
 call plug#end()
 
 colorscheme dracula
