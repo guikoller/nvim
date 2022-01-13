@@ -11,6 +11,8 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'tpope/vim-fugitive'
 	Plug 'vim-airline/vim-airline'
+	Plug 'gmarik/Vundle.vim' " let Vundle manage Vundle
+	Plug 'ryanoasis/vim-webdevicons'
 call plug#end()
 
 colorscheme dracula
@@ -33,3 +35,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
 nnoremap <c-p> :Files<cr>
+
+
+set nocompatible " use vim defaults
+filetype off " filetype needs to be off before Vundle
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+filetype plugin indent on " required
+
+let g:airline_powerline_fonts=1
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 12
+set encoding=utf-8
