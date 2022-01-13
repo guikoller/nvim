@@ -1,4 +1,4 @@
-	call plug#begin()
+call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'dracula/vim', {'name':'dracula'}
@@ -9,6 +9,7 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'tpope/vim-fugitive'
 	Plug 'vim-airline/vim-airline'
 call plug#end()
 
