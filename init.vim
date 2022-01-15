@@ -20,6 +20,7 @@ call plug#end()
 
 
 
+
 " Global Sets
 syntax on            " Enable syntax highlight
 set nu               " Enable line numbers
@@ -36,17 +37,17 @@ set smartcase        " Consider case if there is a upper case character
 set scrolloff=8      " Minimum number of lines to keep above and below the cursor
 set colorcolumn=100  " Draws a line at the given line to keep aware of the line size
 set signcolumn=yes   " Add a column on the left. Useful for linting
-set cmdheight=2      " Give more space for displaying messages
+"set cmdheight=2      " Give more space for displaying messages
 set updatetime=100   " Time in miliseconds to consider the changes
 set encoding=utf-8   " The encoding should be utf-8 to activate the font icons
-set nobackup         " No backup files
-set nowritebackup    " No backup files
-set splitright       " Create the vertical splits to the right
-set splitbelow       " Create the horizontal splits below
+"set nobackup         " No backup files
+"set nowritebackup    " No backup files
+"set splitright       " Create the vertical splits to the right
+"set splitbelow       " Create the horizontal splits below
 set autoread         " Update vim after file update from outside
 set mouse=a          " Enable mouse support
-filetype on          " Detect and set the filetype option and trigger the FileType Event
-filetype plugin on   " Load the plugin file for the file type, if any
+"filetype on          " Detect and set the filetype option and trigger the FileType Event
+"filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 set inccommand=split
 
@@ -61,13 +62,17 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <C-S> :update<CR>
+map <C-Z> :u<CR>
+map <C-Y> :redo<CR>
+map <C-[> :<Esc>
+
 
 
 "Themes
 colorscheme dracula
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
-
 
 
 " NerdTree Menu
@@ -85,3 +90,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "let g:airline_theme = 'sonokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline = 1
+
+
